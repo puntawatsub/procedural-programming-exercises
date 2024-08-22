@@ -5,7 +5,7 @@ name = input("name: ")
 print("Hello,", name)
 
 radius = float(input("radius of circle: "))
-area = 2 * math.pi * radius
+area = math.pi * (radius ** 2)
 print("Area of circle: " + str(area))
 
 length = float(input("length of rectangle: "))
