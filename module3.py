@@ -1,9 +1,10 @@
 print("Task 1: \n")
-try:
-    zanderLength = float(input("Zander length (cm): "))
-except ValueError:
-    raise ValueError("Value entered is not a number.")
-
+while True:
+    try:
+        zanderLength = float(input("Zander length (cm): "))
+        break
+    except ValueError:
+        print("Value entered is not a number.")
 if zanderLength < 42:
     print("The zander length does not meet the size threshold, please release the fish.")
     print("The fish was", str(42 - zanderLength) + "cm", "below the threshold.")
@@ -14,13 +15,13 @@ print("")
 print("Task 2: \n")
 
 cabinClass = input("Cabin class: ")
-if cabinClass == "LUX":
+if cabinClass.capitalize() == "LUX":
     print("upper-deck cabin with a balcony")
-elif cabinClass == "A":
+elif cabinClass.capitalize() == "A":
     print("above the car deck, equipped with a window")
-elif cabinClass == "B":
+elif cabinClass.capitalize() == "B":
     print("windowless cabin above the car deck")
-elif cabinClass == "C":
+elif cabinClass.capitalize() == "C":
     print("windowless cabin below the car deck")
 else:
     raise ValueError("Cabin class entered is not valid.")
@@ -30,7 +31,7 @@ print("Task 3: \n")
 
 while True:
     gender = input("Gender (M/F): ")
-    if gender == "M" or gender == "F":
+    if gender.lower() == "m" or gender.lower() == "f":
         break
     else:
         print("Please enter a valid gender.")

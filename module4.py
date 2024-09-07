@@ -21,13 +21,9 @@ smallest = None
 largest = None
 while True:
     numString = input("Enter a number: ")
-    try:
-        num = int(numString)
-    except ValueError:
-        if numString == "":
-            break
-        else:
-            raise ValueError(f"invalid literal for int() with base 10: {numString}")
+    if numString == "":
+        break
+    num = int(numString)
     if smallest is None and largest is None:
         smallest = num
         largest = num
@@ -84,7 +80,7 @@ inside_circle = 0
 
 for i in range(accuracy):
     random_dot = [random.uniform(-1, 1), random.uniform(-1, 1)]
-    is_inside_circle = ((random_dot[0]**2 + random_dot[1]**2) < 1)
+    is_inside_circle = ((random_dot[0]**2 + random_dot[1]**2) <= 1)
     if is_inside_circle:
         inside_circle += 1
 
