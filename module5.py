@@ -1,3 +1,4 @@
+import math
 import random
 
 def task1():
@@ -30,8 +31,11 @@ def task2():
 def task3():
     print("Task 3: Write a program that asks the user for an integer and tells if the number is a prime number. Prime numbers are number that are only divisible by one or the number itself.")
     input_number = int(input("Enter an integer: "))
-    if input_number == 2 or input_number % 2 == 0 or input_number == 1:
-        print("Not a prime number")
+    if input_number == 2 or input_number % 2 == 0 or input_number < 0:
+        if input_number != 0:
+            print("Not a prime number")
+        else:
+            print("Neither")
     else:
         for i in range(3, input_number, 2):
             if input_number % i == 0 or input_number == 1 :

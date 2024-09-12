@@ -58,7 +58,7 @@ def task5():
 
 def task6():
     def pizza_size(diameter):
-        return math.pi * ((diameter/2) ** 2)
+        return math.pi * (((diameter/2) / 100) ** 2)
     pizza1_diameter = float(input("Enter the diameter of pizza 1: "))
     pizza1_price = float(input("Enter the price of pizza 1: "))
     pizza2_diameter = float(input("Enter the diameter of pizza 2: "))
