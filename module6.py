@@ -57,14 +57,14 @@ def task5():
     print(remove_uneven(list_a))
 
 def task6():
-    def pizza_size(diameter):
-        return math.pi * (((diameter/2) / 100) ** 2)
+    def pizza_unit_size(diameter, price):
+        return price/(math.pi * (((diameter/2) / 100) ** 2))
     pizza1_diameter = float(input("Enter the diameter of pizza 1: "))
     pizza1_price = float(input("Enter the price of pizza 1: "))
     pizza2_diameter = float(input("Enter the diameter of pizza 2: "))
     pizza2_price = float(input("Enter the price of pizza 2: "))
-    pizza1_value = pizza1_price / pizza_size(pizza1_diameter)
-    pizza2_value = pizza2_price / pizza_size(pizza2_diameter)
+    pizza1_value = pizza_unit_size(pizza1_diameter, pizza1_price)
+    pizza2_value = pizza_unit_size(pizza2_diameter, pizza2_price)
     if pizza1_value > pizza2_value:
         print("Pizza 2 is cheaper than pizza 1")
     elif pizza1_value < pizza2_value:
