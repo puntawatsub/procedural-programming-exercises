@@ -106,5 +106,5 @@ def task2():
     print(f"Gasoline: {gasoline1.travelled_distance} km")
 
 if __name__ == "__main__":
-    task1
+    task1()
     task2()
